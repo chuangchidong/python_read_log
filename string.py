@@ -30,9 +30,17 @@ with open('string.log') as file:
         requests = arr[2].split(' ')
 
         if requests[0]=='GET':
-            pass
+            methods = requests[1].split('?')
+            method = methods[0]
+            if len(methods)>1 :
+                field = methods[1]
+
         elif requests[0]=="POST":
-            pass
+            methods = requests[1].split('?')
+            method = methods[0]
+            if len(methods)>1 :
+                field = methods[1]
+
         else:
             continue
 
